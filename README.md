@@ -62,7 +62,7 @@ $ docker cp 0589c906c96c:/app/'Dance With The Dead - Andromeda [Synthwave  Cyber
 $ ls -lrth
 -rw-r--r--  1 saul saul  55M Aug 29 19:35 video_downloaded.mp4
 ````
-- What if I told you that you can map your current folder and the docker volume so you do not have to extract the video from the container? Let's do it.
+- What if I told you that you can map your current folder and the `docker volume` so you do not have to extract the video from the container? Let's do it.
 ````
 $ docker run -it -v ${PWD}:/app python-youtube-downloader sh
 CONTAINER ID   IMAGE                       COMMAND   CREATED         STATUS         PORTS     NAMES
