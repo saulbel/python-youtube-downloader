@@ -7,6 +7,7 @@
 python-youtube-downloader
 |── app.py
 |── Dockerfile    
+|── requirements.txt   
 └── scripts
      └── setup.sh
 ```
