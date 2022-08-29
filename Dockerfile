@@ -1,4 +1,4 @@
-FROM python:3.11.0rc1-slim-bullseye 
+FROM python:3.10.6-alpine3.16
 WORKDIR /app
 COPY  requirements.txt /app/requirements.txt
 RUN python3 -m venv /opt/venv
