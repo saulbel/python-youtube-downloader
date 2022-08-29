@@ -44,14 +44,15 @@ $ docker run -it python-youtube-downloader sh
 - Now we will just have to execute our program and download as many videos as we want to :)
 ````
 # python3 app.py
-Introduce the link of Youtube you wanna download: https://www.youtube.com/watch?v=ICuM2o-Vcms&ab_channel=The%2780sGuy
+/app # python app.py
+Introduce the link of Youtube you wanna download or 'exit' to close the app: https://www.youtube.com/watch?v=ICuM2o-Vcms&ab_channel=The%2780sGuy
 Title:  Dance With The Dead - Andromeda [Synthwave / Cyberpunk) (The '80s Guy Montage)
-Views:  851523
+Views:  851528
 Length:  300
-Introduce 'video' for mp4, 'audio' for mp3 or 'exit' if you wanna finish downloading stuff: video
+Introduce 'video' ,'audio', or 'exit': video
 Downloading....
-Downdload completed
-Introduce 'video' for mp4, 'audio' for mp3 or 'exit' if you wanna finish downloading stuff: exit
+Download completed
+Introduce the link of Youtube you wanna download or 'exit' to close the app: exit
 Till nex time !
 ````
 - What if we wanna extract the video from the container to our local machine? It's quite simple, we just need the `container id`:
@@ -70,17 +71,16 @@ CONTAINER ID   IMAGE                       COMMAND   CREATED         STATUS     
 0589c906c96c   python-youtube-downloader   "sh"      6 minutes ago   Up 6 minutes             bold_babbage
 # ls
 Dockerfile  README.md  app.py  requirements.txt  scripts
-# python3 app.py
-Introduce the link of Youtube you wanna download: https://www.youtube.com/watch?v=Oa_joiuHRmo&ab_channel=SxDementia
+/app # python app.py
+Introduce the link of Youtube you wanna download or 'exit' to close the app: https://www.youtube.com/watch?v=Oa_joiuHRmo&ab_channel=SxDementia
 Title:  ROCKY - Retrospective (2016)
-Views:  4466358
+Views:  4466445
 Length:  636
-Introduce 'video' for mp4, 'audio' for mp3 or 'exit' if you wanna finish downloading stuff: video
+Introduce 'video' ,'audio', or 'exit': video
 Downloading....
-Downdload completed
-Introduce 'video' for mp4, 'audio' for mp3 or 'exit' if you wanna finish downloading stuff: exit
+Download completed
+Introduce the link of Youtube you wanna download or 'exit' to close the app: exit
 Till nex time !
-# exit
 $ ls
 Dockerfile   README.md  'ROCKY - Retrospective (2016).mp4'   app.py   requirements.txt   scripts
 ````
