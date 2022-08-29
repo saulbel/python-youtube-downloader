@@ -53,3 +53,12 @@ Downdload completed
 Introduce 'video' for mp4, 'audio' for mp3 or 'exit' if you wanna finish downloading stuff: exit
 Till nex time !
 ````
+- What if we wanna extract the video from the container to our local machine? It's quite simple, we just need the `container id`:
+````
+$ docker ps
+CONTAINER ID   IMAGE                       COMMAND   CREATED         STATUS         PORTS     NAMES
+0589c906c96c   python-youtube-downloader   "sh"      6 minutes ago   Up 6 minutes             bold_babbage
+$ docker cp 0589c906c96c:/app/'Dance With The Dead - Andromeda [Synthwave  Cyberpunk) (The 80s Guy Montage).mp4' video_downloaded.mp4
+$ ls -lrth
+-rw-r--r--  1 saul saul  55M Aug 29 19:35 video_downloaded.mp4
+````
