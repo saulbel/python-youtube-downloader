@@ -61,16 +61,12 @@ $ docker ps
 CONTAINER ID   IMAGE                       COMMAND   CREATED         STATUS         PORTS     NAMES
 0589c906c96c   python-youtube-downloader   "sh"      6 minutes ago   Up 6 minutes             bold_babbage
 $ docker cp 0589c906c96c:/app/'Dance With The Dead - Andromeda [Synthwave  Cyberpunk) (The 80s Guy Montage).mp4' video_downloaded.mp4
-$ ls -lrth
--rw-r--r--  1 saul saul  55M Aug 29 19:35 video_downloaded.mp4
 ````
 - What if I told you that you can map your current folder and the `docker volume` so you do not have to extract the video from the container? Let's do it.
 ````
 $ docker run -it -v ${PWD}:/app python-youtube-downloader sh
 CONTAINER ID   IMAGE                       COMMAND   CREATED         STATUS         PORTS     NAMES
 0589c906c96c   python-youtube-downloader   "sh"      6 minutes ago   Up 6 minutes             bold_babbage
-# ls
-Dockerfile  README.md  app.py  requirements.txt  scripts
 /app # python app.py
 Introduce the link of Youtube you wanna download or 'exit' to close the app: https://www.youtube.com/watch?v=Oa_joiuHRmo&ab_channel=SxDementia
 Title:  ROCKY - Retrospective (2016)
@@ -81,6 +77,4 @@ Downloading....
 Download completed
 Introduce the link of Youtube you wanna download or 'exit' to close the app: exit
 Till nex time !
-$ ls
-Dockerfile   README.md  'ROCKY - Retrospective (2016).mp4'   app.py   requirements.txt   scripts
 ````
