@@ -83,3 +83,11 @@ Till nex time !
 $ ls
 Dockerfile   README.md  'ROCKY - Retrospective (2016).mp4'   app.py   requirements.txt   scripts
 ````
+## GitHub Actions
+I have built a CI pipeline that builds a custom `python` docker image with `Dockerfile` and pushes it into GitHub container registry  `ghcr.io`. If I want to pull new `docker image` I will just have to:
+````
+$ docker pull ghcr.io/saulbel/python-youtube-downloader:main
+$ docker images
+REPOSITORY                                  TAG                 IMAGE ID       CREATED             SIZE
+ghcr.io/saulbel/python-youtube-downloader   main                a6219a03e4e5   3 minutes ago       74.4MB
+````
