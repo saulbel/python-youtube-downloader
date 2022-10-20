@@ -78,3 +78,11 @@ Download completed
 Introduce the link of Youtube you wanna download or 'exit' to close the app: exit
 Till nex time !
 ````
+## GitHub Actions
+I have built a CI pipeline that builds a custom `python` docker image with `Dockerfile` and pushes it into GitHub container registry  `ghcr.io`. If I want to pull new `docker image` I will just have to:
+````
+$ docker pull ghcr.io/saulbel/python-youtube-downloader:main
+$ docker images
+REPOSITORY                                  TAG                 IMAGE ID       CREATED             SIZE
+ghcr.io/saulbel/python-youtube-downloader   main                a6219a03e4e5   3 minutes ago       74.4MB
+````
